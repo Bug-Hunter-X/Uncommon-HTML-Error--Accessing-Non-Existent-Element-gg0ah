@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Incorrectly attempting to set the innerHTML of a non-existent element
+    document.getElementById("nonExistentElement").innerHTML = "<p>This will cause an error.</p>";
+    document.getElementById('myDiv').innerHTML += "<p>Appended Text</p>";
+  </script>
+</body>
+</html>
