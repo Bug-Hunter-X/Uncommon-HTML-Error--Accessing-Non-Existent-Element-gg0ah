@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Check if the element exists before attempting to access it
+    const nonExistentElement = document.getElementById("nonExistentElement");
+    if (nonExistentElement) {
+      nonExistentElement.innerHTML = "<p>This will only run if the element exists.</p>";
+    }
+    document.getElementById('myDiv').innerHTML += "<p>Appended Text</p>";
+  </script>
+</body>
+</html>
